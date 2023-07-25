@@ -1,0 +1,28 @@
+.footer {
+	color: #fff;
+	background: $purple;
+	padding: rem(50) 0;
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__contacts {
+		font-family: 'Philosopher';
+		font-weight: 700;
+		font-size: rem(32);
+		address {
+			font-style: normal;
+		}
+	}
+
+	&__phone {
+		color: #fff;
+		text-decoration: none;
+		&:hover {
+			color: #fff;
+			text-decoration: underline;
+		}
+	}
+}

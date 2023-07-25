@@ -1,0 +1,139 @@
+.header {
+	background-color: $purple;
+	padding: 25px 0;
+	color: #fff;
+
+	.row {
+		align-items: center;
+	}
+
+	&__logo {
+		max-width: 161px;
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo-img {
+		width: 100%;
+	}
+
+	&__menu {
+	}
+
+	&__menu-list {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	&__menu-item {
+		margin-right: 24px;
+		&--sub {
+			cursor: pointer;
+			position: relative;
+			padding-right: 20px;
+			input {
+				display: none;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				width: 11px;
+				height: 5px;
+				right: 0;
+				margin-top: 1px;
+				top: 50%;
+				transform: translateY(-50%);
+				background: url("../images/icons/chevron-down.svg");
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+
+			}
+			&:hover .header__menu-sublist {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+
+	&__menu-link {
+		font-size: 1rem;
+		color: #fff;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	&__menu-sublist {
+		list-style: none;
+		position: absolute;
+		background: #fff;
+		opacity: 0;
+		padding: 5px 0 10px 0;
+
+		transform: translateY(-5px);
+		transition: .3s;
+		margin-top: 5px;
+		z-index: 3;
+	}
+
+	&__menu-subitem {
+	}
+
+	&__menu-sublink {
+		font-size: rem(16  );
+		padding: 5px 15px 5px 10px;
+		color: #333;
+		text-decoration: none;
+		white-space: nowrap;
+		width: 100%;
+		display: block;
+		transition: .2s;
+		&:hover {
+			background-color: #F6F2F2;
+		}
+	}
+
+	&__contacts {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	&__contacts-social-list {
+		list-style: none;
+		display: flex;
+		align-items: center;
+		padding: 0;
+		margin: 0;
+	}
+
+	&__contacts-social-item {
+		margin-right: rem(12);
+	}
+
+	&__contacts-social-link {
+		width: rem(25);
+		height: rem(25);
+		display: block;
+	}
+
+	&__contacts-social-icon {
+		width: 100%;
+		height: 100%;
+		fill: #fff;
+	}
+
+	&__contacts-phone {
+		color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: rem(24);
+		line-height: 24px;
+		margin-left: -5px;
+		margin-top: -1px;
+	}
+}

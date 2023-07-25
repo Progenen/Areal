@@ -1,8 +1,11 @@
 // Libs
+@import "../../node_modules/bootstrap/dist/css/bootstrap-grid.css";
+@import "../../node_modules/slick-carousel/slick/slick.css";
 
 // Main
 @import "support";
 @import "all";
-@import "script-classes";
 @import "header";
+@import "main";
 @import "footer";
+@import "media";

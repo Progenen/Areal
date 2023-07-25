@@ -1,25 +1,95 @@
 <footer class="footer">
-
-</footer>
-</div>
-
-<div class="mobile-menu" data-labelledby="mobMenu">
-    <div class="mobile-menu__header">
-        <div class="mobile-menu__back">
-            <svg class="mobile-menu__back-icon">
-                <use xlink:href='svg/dest/stack/sprite.svg#arrow-left'></use>
-            </svg>
-            Назад
+    <div class="container">
+        <div class="footer__row">
+            <a href="#" class="footer__logo header__logo">
+                <img src="images/logo.png" alt="logo" class="footer__logo-img header__logo-img">
+            </a>
+            <div class="footer__contacts">
+                Контактные данные :
+                <address>
+                    г.Астана, ул.Сарыарка 8</address>
+                телефон <a href="#" class="footer__phone">87029996127</a>
+            </div>
         </div>
-        <div class="mobile-menu__close">
-            <svg class="mobile-menu__close-icon">
-                <use xlink:href='svg/dest/stack/sprite.svg#plus'></use>
-            </svg>
+    </div>
+</footer>
+
+
+<div class="modal-wrapper modal-tab-wrapper">
+    <div class="modal-close"><img src="images/cross.svg" alt=""></div>
+    <div class="modal modal-tab">
+        <div class="modal__col modal__col--img modal-tab__img">
+            <img src="" alt="">
+        </div>
+        <div class="modal__col modal__col--info modal-tab__info">
+            <h2 class="modal-tab__title"></h2>
+            <div class="modal-tab__text"></div>
+            <button class="modal-tab__btn modal-form-btn"></button>
         </div>
     </div>
 </div>
 
+<div class="modal-wrapper modal-form-wrapper">
+    <div class="modal-close"><img src="images/cross.svg" alt=""></div>
+    <div class="modal modal-form">
+        <div class="modal-form__col modal-form__col--img">
+            <img src="images/form.jpg" alt="">
+        </div>
+        <div class="modal-form__col modal-form__col--info">
+            <div class="modal-form__title">
+                Закажите <span class="modal-form__name"></span> у нас
+            </div>
+            <div class="modal-form__text">
+                Оставьте свои данные и мы обязательно  с вами свяжемся
+            </div>
+            <form class="modal-form__form">
+                <input type="text" class="modal-form__form-input" placeholder="Ваше имя" name="name" required>
+                <input type="phone" class="modal-form__form-input" placeholder="Номер телефона" name="phone" required>
+                <button type="submit" class="modal-form__form-btn btn">
+                    Заказать
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal-wrapper modal-thanks-wrapper">
+    <div class="modal-close"><img src="images/cross.svg" alt=""></div>
+    <div class="modal modal-thanks">
+        <div class="modal-thanks__col modal-thanks__col--info">
+            <div class="modal-thanks__title">
+                Спасибо за ваш заказ!
+            </div>
+            <div class="modal-thanks__text">
+                Мы свяжемся с вами в ближайшее время. <br/>
+                Звоните, либо пишите нам, если возникли какие-то трудности.
+            </div>
+        </div>
+        <div class="modal-thanks__col modal-thanks__col--img">
+            <img src="images/thanks.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="popup-load popup">
+    <div class="popup-load__inner popup__inner">
+        <img class="popup-load__img" src="images/spinner.gif" alt="loading">
+    </div>
+</div>
+
+<div class="modal-wrapper modal-error-wrapper">
+    <div class="modal-close"><img src="images/cross.svg" alt=""></div>
+    <div class="modal-error modal ">
+        <img class="modal-error__img" src="images/error.png" alt="error">
+        <div class="modal-error__text">
+            Нам не удалось отправить вашу заявку, пожалуйста свяжитесь с нами по-телефону, или попробуйте снова
+        </div>
+        
+    </div>
+</div>
+
 <script src="JS/bundle.js"></script>
+
 </body>
 
 </html>

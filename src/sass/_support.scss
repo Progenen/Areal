@@ -13,7 +13,7 @@
 // Перевод из px в rem
 
 @function rem($size) {
-  @return calc($size / 14)+rem
+  @return calc($size / 20)+rem
 }
 
 @mixin adaptiveValue($property, $startSize, $minSize, $type) {
@@ -65,9 +65,15 @@
 }
 
 // Fonts
-@include font-face('Roboto', '../fonts/Roboto/Roboto-Bold', bold, normal, ttf);
+@include font-face('Open Sans', '../fonts/Open Sans/OpenSans-Bold', bold, normal, ttf);
+@include font-face('Open Sans', '../fonts/Open Sans/OpenSans-Regular', 400, normal, ttf);
+@include font-face('Philosopher', '../fonts/Philosopher/Philosopher-Bold', bold, normal, ttf);
+@include font-face('Philosopher', '../fonts/Philosopher/Philosopher-Regular', 400, normal, ttf);
 
 // Vars
+
+$purple: #842AB5;
+$gray: #D9D9D9;
 
 // Путь к спрайту для конкатенации
 

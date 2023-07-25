@@ -1,0 +1,637 @@
+
+
+.offer {
+	color: #fff;
+	margin-top: 0;
+	&__slider {
+		align-items: stretch;
+		display: flex;
+		.slick-track {
+			display: flex;
+			align-items: stretch;
+		}
+	}
+
+	&__slider-dots {
+		display: flex;
+		list-style: none;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 150px;
+		padding: 0;
+		margin: 0;
+		li {
+			margin-right: 11px;
+			button {
+				font-size: 0;
+				background: #fff;
+				width: 20px;
+				height: 20px;
+				border: 3px solid #fff;
+				border-radius: 50%;
+				cursor: pointer;
+				transition: .3s;
+			}
+			&.slick-active button {
+
+				background: $purple;
+			}
+		}
+	}
+
+	&__slide {
+		height: 100vh;
+		position: relative;
+		padding: rem(100) 0 rem(148);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	&__slide-bg-mask {
+		background-color: rgba(0, 0, 0, .3);
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 2;
+	}
+
+	&__slide-video {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		object-fit: cover;
+	}
+
+	&__slide-content {
+		z-index: 3;
+		position: relative;
+	}
+
+	&__slide-title {
+		font-family: "Philosopher";
+		font-size: rem(96);
+		font-weight: 400;
+		margin-bottom: 13px;
+		max-width: 914px;
+		width: 100%;
+	}
+
+	&__slide-text {
+		font-size: 2rem;
+		margin-bottom: 44px;
+		max-width: 856px;
+		width: 100%;
+	}
+
+	&__slide-btn {
+		max-width: 280px;
+		&:hover {
+			color: #fff;
+		}
+	}
+}
+
+.services {
+	&__tab-titles {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 20px;
+		flex-wrap: wrap;
+		position: relative;
+	}
+
+	&__tab-titles-item {
+		padding: 7px 20px;
+		border-radius: 50px;
+		border: 3px solid $purple;
+		text-align: center;
+		font-size: rem(20);
+		margin-right: 12px;
+		cursor: pointer;
+		transition: .3s;
+		white-space: nowrap;
+		margin-bottom: 10px;
+		&:hover {
+			background: $purple;
+			color: #fff;
+		}
+		&.active {
+			background: $purple;
+			color: #fff;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.row {
+	}
+
+	&__tab-content {
+		position: absolute;
+		opacity: 0;
+		visibility: hidden;
+		top: 0;
+		transition: .6s;
+		&.active {
+			opacity: 1;
+			visibility: visible;
+			position: relative;
+		}
+	}
+
+	&__tab-wrapper {
+		position: relative;
+		width: 102%;
+		margin-top: calc(-1 * var(--bs-gutter-y));
+		margin-right: calc(-.5 * var(--bs-gutter-x));
+		margin-left: calc(-.5 * var(--bs-gutter-x));
+	}
+
+	&__tab-content-item {
+		background-color: #D9D9D9;
+		padding: rem(30) rem(23) rem(40);
+		border-radius: 20px;
+		margin-bottom: 20px;
+
+	}
+
+	&__tab-content-item-title {
+		text-align: center;
+		font-weight: 700;
+		font-size: rem(28);
+		margin: 0;
+	}
+
+	&__tab-content-item-img {
+		border-radius: 20px;
+		width: 100%;
+		height: 213px;
+		object-fit: cover;
+		object-position: top center;
+		margin: rem(24) 0;
+	}
+
+	&__tab-content-item-text {
+		font-size: rem(24);
+		margin: 0;
+	}
+
+	&__tab-content-item-ui {
+		margin-top: rem(52);
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__tab-content-item-btn {
+		max-width: 170px;
+		padding: 11px 7px;
+		font-size: 20px;
+		&:first-child {
+			margin-right: 10px;
+		}
+	}
+	
+	&__tab-content-full-text {
+		display: none;
+	}
+	&__tab-content-full-type {
+		display: none;
+	}
+	&__tab-content-full-price {
+		display: none;
+	}
+}
+
+.reviews {
+	&__item {
+		border: 1px solid $purple;
+		border-radius: 20px;
+		padding: rem(12) rem(35) rem(36) rem(35);
+		height: 100%;
+	}
+
+	.row {
+		align-items: stretch;
+		.col-lg-6 {
+			
+		margin-bottom: 20px;
+		}
+	}
+
+	&__item-header {
+		display: flex;
+		align-items: center;
+		img {
+			display: block;
+			max-width: 109px;
+			width: 100%;
+		}
+	}
+
+	&__item-header-text {
+		margin-left: rem(38);
+	}
+
+	&__item-header-name {
+		font-weight: 700;
+		font-size: rem(30);
+	}
+
+	&__item-header-status {
+		font-size: rem(22);
+	}
+
+	&__item-body p{
+		margin-bottom: 0;
+	}
+
+	&__more-btn {
+		max-width: 320px;
+		margin-top: 22px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	&__more-items {
+		display: none;
+		&.show {
+			display: flex;
+		}
+	}
+}
+
+.contacts {
+	background-color: #d9d9d9;
+	margin-top: rem(83);
+	padding: rem(80) 0;
+
+	&__title {
+		margin-bottom: rem(70);
+	}
+
+	&__row {
+		align-items: center;
+	}
+
+	&__col {
+		&--map {
+		}
+
+		&--info {
+		}
+	}
+
+	&__map {
+		width: 100%;
+		height: 389px;
+	}
+
+	&__info {
+	}
+
+	&__info-title {
+		font-weight: 700;
+		font-size: rem(32);
+		font-family: "Philosopher";
+		margin-bottom: 15px;
+	}
+
+	&__info-list {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	&__info-item {
+		font-weight: 400;
+		font-size: rem(28);
+		margin-bottom: 8px;
+		font-family: "Philosopher";
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__info-name {
+		margin-right: 8px;
+	}
+
+	&__info-cur {
+	}
+
+	&__info-phone {
+		text-decoration: none;
+		color: #000;
+		&:hover {
+			color: #000;
+			text-decoration: underline;
+		}
+	}
+
+	&__info-form {
+		max-width: 330px;
+		width: 100%;
+		margin-top: 12px;
+	}
+
+	&__info-form-input {
+		color: $purple;
+		width: 100%;
+		font-size: rem(20);
+		padding: 14px 20px;
+		background: #fff;
+		border-radius: 20px;
+		border: none;
+		margin-bottom: 12px;
+		&::placeholder {
+			color: $purple;
+		}
+	}
+
+	&__info-form-btn {
+		width: 100%;
+	}
+}
+
+.modal-wrapper {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: translateY(100%);
+	visibility: hidden;
+	transition: .3s;
+	overflow: auto;
+	z-index: 100;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.modal {
+		opacity: 0;
+		transform: translateY(50px);
+		transition: .3s;
+		transition-delay: .2s;
+		max-width: 1690px;
+		width: 100%;
+		height: 740px;
+		background: #d9d9d9;
+		display: flex;
+		align-items: stretch;
+		margin-top: 40px;
+	}
+	&.show {
+		visibility: visible;
+		opacity: 1;
+		transform: translateY(0);
+		.modal {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}
+.modal-close {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	width: 32px;
+	height: 32px;
+	padding: 10px;
+	box-sizing: content-box;
+	cursor: pointer;
+	z-index: 4;
+	background-color: #fff;
+}
+
+.modal-tab {
+	&__img {
+		flex: 0 1 39.433%;
+		img {
+			display: block;
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__info {
+		flex: 0 1 60.677%;
+		padding: rem(60) rem(53);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__title {
+		font-weight: 400;
+		color: $purple;
+		font-size: rem(36);
+		font-family: "Philosopher";
+	}
+
+	&__text {
+		height: 100%;
+		max-width: 682px;
+	}
+
+	&__btn {
+		background: $purple;
+		cursor: pointer;
+		font-size: rem(30);
+		padding: 33px 12px;
+		max-width: 833px;
+		width: 100%;
+		text-align: center;
+		color: #fff;
+		border: 3px solid $purple;
+		transition: .2s;
+		margin-top: 20px;
+		&:hover {
+			color: $purple;
+			background: #ffffff;
+		}
+	}
+}
+
+.modal-wrapper {
+	.modal-form {
+		max-width: 1327px;
+		height: 615px;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+
+		&__col--img {
+			flex: 0 1 40%;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+		}
+
+		&__col--info {
+			flex: 0 1 60%;
+			padding: rem(60) rem(42);
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__title {
+			font-family: 'Philosopher';
+			font-style: normal;
+			font-weight: 400;
+			font-size: rem(35);
+		}
+
+		&__text {
+			font-size: rem(20);
+			margin-top: 18px;
+			margin-bottom: rem(64);
+			max-width: 433px;
+			height: 100%;
+		}
+
+		&__name {
+		}
+
+		&__form {
+		}
+
+		&__form-input {
+			background: #FFFFFF;
+			border-radius: 20px;
+			padding: 25px 30px;
+			border: none;
+			color: $purple;
+			font-size: rem(23);
+			width: 100%;
+			margin-bottom: rem(34);
+			&::placeholder {
+				color: $purple;
+			}
+		}
+
+		&__form-btn {
+			width: 100%;
+			max-width: none;
+			padding: rem(25) rem(15);
+			font-size: rem(23);
+		}
+	}
+}
+.popup {
+	
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba($color: #fff, $alpha: .5);
+	opacity: 0;
+	visibility: hidden;
+	transition: .3s;
+	&.show {
+		opacity: 1;
+		visibility: visible;
+		.popup-load__inner {
+			transform: scale(1);
+		}
+	}
+
+	&__inner {
+		background: #fff;
+		padding: 30px;
+		border-radius: 15px;
+		transform: scale(0);
+		transition: .3s;
+	}
+}
+
+.modal-thanks-wrapper {
+}
+
+.modal-thanks {
+	display: flex;
+	align-items: center;
+	max-width: 1485px;
+	&__col {
+	}
+
+	&__col--info {
+		width: 67.777%;
+		padding-left: rem(60);
+		padding-right: rem(30);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__col--img {
+		width: 33.333%;
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__title {
+		max-width: 474px;
+		font-family: 'Philosopher';
+		font-weight: 700;
+		font-size: rem(55);
+		margin-bottom: rem(62);
+	}
+
+	&__text {
+		max-width: 640px;
+		font-size: rem(36);
+	}
+}
+
+.popup-load {
+	&__img {
+		width: 120px;
+		height: 120px;
+		display: block;
+	}
+}
+
+.modal-error {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	&__img {
+		max-width: 220px;
+		width: 100%;
+		display: block;
+		margin: 0 auto 15px auto;;
+	}
+
+	&__text {
+		max-width: 600px;
+		margin: 0 auto 0 auto;;
+	}
+}
+

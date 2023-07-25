@@ -5,15 +5,16 @@
 body {
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
-    font-family: Roboto;
+    font-family: "Open Sans";
     font-weight: 400;
 }
 
-body,
 html {
+    font-size: 20px;
+}
+
+body, html {
     height: 100%;
-    overflow-x: hidden;
 }
 
 a {
@@ -25,13 +26,62 @@ a {
 .wrapper {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    overflow-x: hidden;
+    position: relative;    height: 100%;
 }
 
 .content {
     flex: 1 0 auto;
 }
 
+.title {
+    font-family: "Philosopher";
+    font-weight: 700;
+    font-size: rem(64);
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+.section {
+    padding: rem(42) 0 rem(42);
+}
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    background: $purple;
+    border: 2px solid $purple;
+    padding: 15px 9px;
+    width: 100%;
+    font-size: 20px;
+    border-radius: 50px;
+    text-align: center;
+    display: block;
+    transition: .3s;
+    cursor: pointer;
+    &:hover {
+        background: transparent;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        color: $purple;
+        text-decoration: none;
+        transform: translateY(-2px);
+    }
+    &--white {
+        background: #fff;
+        color: $purple;
+        border: none;
+        &:hover {
+            color: $purple;
+        }
+    }
+}
+
 footer {
     flex: 0 0 auto;
+}
+
+section {
+    margin-top: rem(80);
 }
